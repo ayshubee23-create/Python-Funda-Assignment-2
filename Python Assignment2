@@ -1,0 +1,96 @@
+
+
+# 1.
+age_list = [24, 25, 26, 27, 28]
+name_list = ["Anitha", "Bala", "Charan", "Divya", "Ezhil"]
+print("age_list :", age_list)
+print("name_list:", name_list)
+
+# 2. 
+name_list.append("Yazhini")       
+print("After append  :", name_list)
+
+age_list.insert(2, 30)              
+print("After insert  :", age_list)
+
+name_list.remove("Yazhini")         
+print("After remove  :", name_list)
+
+popped = age_list.pop()             
+print("Popped element:", popped, "| age_list:", age_list)
+
+age_list.extend([29, 30, 26])        
+print("After extend  :", age_list)
+
+age_list.sort(reverse=True)          
+print("Sorted (desc) :", age_list)
+
+
+print("Max age:", max(age_list))
+print("Min age:", min(age_list))
+print("Sum of ages:", sum(age_list))
+
+print("First element       :", name_list[0])
+print("Last element        :", name_list[-1])
+print("Index 2 to 4        :", name_list[2:5])   
+print("Reverse order       :", name_list[::-1])
+
+
+student_marks = {
+    "Anitha": 88,
+    "Bala": 72,
+    "Charan": 65,
+    "Divya": 91,
+    "Ezhil": 79,
+}
+print("student_marks:", student_marks)
+
+
+print("Divya's mark:", student_marks["Divya"])
+
+
+student_marks["Janani"] = 80
+print("After adding Janani:", student_marks)
+
+
+student_marks["Bala"] = 82
+print("After updating Bala:", student_marks)
+
+
+print("Keys  :", list(student_marks.keys()))
+print("Values:", list(student_marks.values()))
+print("Items :", list(student_marks.items()))
+
+print("\n ---SETS--- ")
+
+my_set = set(['a', 'e', 'i', 'o', 'u', 'a', 'a', 'i'])
+print("my_set:", my_set)
+
+try:
+    my_set[4] = 's'
+except TypeError as e:
+    print("Error:", e)
+set1 = {1, 3, 5, 7, 9}
+set2 = {2, 3, 5, 8, 10}
+
+# d. Union and intersection
+print("Union       :", set1 | set2)          
+print("Intersection:", set1 & set2)        
+
+
+print("\n----- PERFORMANCE CATEGORY ------")
+
+try:
+    score = float(input("Enter your score (0 to 10): "))
+
+    if score < 0 or score > 10:
+        print("Invalid input! Score must be between 0 and 10 (inclusive).")
+    elif score > 7:
+        print("Above Average: Excellent work! Keep up the great performance.")
+    elif score >= 4:
+        print("Average: Good effort! Keep practicing, there's room for improvement.")
+    else:
+        print("Below Average: Need to improve your performance, "
+              "consistent practice will lead to better results.")
+except ValueError:
+    print("Invalid input! Please enter a number between 0 and 10.")
